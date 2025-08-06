@@ -6,14 +6,14 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Abhilash-cloud/argocd/nginx-helm.git
+    repoURL: https://github.com/Abhilash-cloud/argocd.git
     targetRevision: HEAD
-    path: .
+    path: nginx-helm
     helm:
       releaseName: nginx-demo
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: nginx
   syncPolicy:
     automated:
       prune: true
